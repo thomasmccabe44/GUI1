@@ -1,0 +1,80 @@
+<html>
+
+<head>
+	<title>hw18</title>
+	<style type="text/css">
+		@font-face {
+			font-family: "DOTMBold";
+			src: url("DOTMBold.TTF");
+		}
+
+		@font-face {
+			font-family: "LLPIXEL3";
+			src: url("LLPIXEL3.ttf");
+		}
+
+		@font-face {
+			font-family: "Technology";
+			src: url("Technology.ttf");
+		}
+
+		@font-face {
+			font-family: "The Led Display St";
+			src: url("The Led Display St.ttf");
+		}
+
+		#clock1 {
+			font-family: "Calculator";
+			font-size: 70px;
+		}
+
+		#clock2 {
+			font-family: "DOTMBold";
+			font-size: 70px;
+		}
+
+		#clock3 {
+			font-family: "LLPIXEL3";
+			font-size: 70px;
+		}
+
+		#clock4 {
+			font-family: "Technology";
+			font-size: 70px;
+		}
+
+		#clock5 {
+			font-family: "The Led Display St";
+			font-size: 70px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="clock1"></div>
+	<div id="clock2"></div>
+	<div id="clock3"></div>
+	<div id="clock4"></div>
+	<div id="clock5"></div>
+
+
+	<script type="text/javascript">
+		setInterval(function() {
+
+			var today = new Date();
+			var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+			var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+			var dateTime = date + ' ' + time;
+
+			document.getElementById('clock1').innerHTML = dateTime;
+			document.getElementById('clock2').innerHTML = dateTime;
+			document.getElementById('clock3').innerHTML = dateTime;
+			document.getElementById('clock4').innerHTML = dateTime;
+			document.getElementById('clock5').innerHTML = dateTime;
+
+		}, 1000)
+	</script>
+</body>
+
+</html>

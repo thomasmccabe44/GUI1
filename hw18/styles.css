@@ -1,0 +1,140 @@
+@font-face {
+    font-family: "Arkhip";
+    src: url("arhip_font.ttf");
+}
+@font-face {
+    font-family: "IBM";
+    src: url("IBM-Logo.ttf");
+}
+@font-face {
+    font-family: "Gp";
+    src: url("Gameplay.ttf");
+}
+@font-face {
+    font-family: "Go";
+    src: url("game_over.ttf");
+}
+@font-face {
+    font-family: "ka1";
+    src: url("ka1.ttf");
+}
+
+
+.clockdate-wrapper1 {
+    background-color: #333;
+    padding: 25px;
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 15%;
+}
+
+
+#clock1 {
+    background-color: #333;
+    font-family: "Arkhip";
+    font-size: 60px;
+    text-shadow: 0px 0px 1px #fff;
+    color: #fff;
+}
+
+#clock2 {
+    background-color: #333;
+    font-family: "IBM";
+    font-size: 60px;
+    text-shadow: 0px 0px 1px #fff;
+    color: #fff;
+}
+#clock3 {
+    background-color: #333;
+    font-family: "Gp";
+    font-size: 60px;
+    text-shadow: 0px 0px 1px #fff;
+    color: #fff;
+}
+#clock4 {
+    background-color: #333;
+    font-family: "Go";
+    font-size: 60px;
+    text-shadow: 0px 0px 1px #fff;
+    color: #fff;
+}
+#clock5 {
+    background-color: #333;
+    font-family: "ka1";
+    font-size: 60px;
+    text-shadow: 0px 0px 1px #fff;
+    color: #fff;
+}
+#clock1 span {
+    color: #888;
+    text-shadow: 0px 0px 1px #333;
+    font-size: 30px;
+    position: relative;
+    top: -27px;
+    left: -10px;
+}
+#clock2 span {
+    color: #888;
+    text-shadow: 0px 0px 1px #333;
+    font-size: 30px;
+    position: relative;
+    top: -27px;
+    left: -10px;
+}
+#clock3 span {
+    color: #888;
+    text-shadow: 0px 0px 1px #333;
+    font-size: 30px;
+    position: relative;
+    top: -27px;
+    left: -10px;
+}
+#clock4 span {
+    color: #888;
+    text-shadow: 0px 0px 1px #333;
+    font-size: 30px;
+    position: relative;
+    top: -27px;
+    left: -10px;
+}
+#clock5 span {
+    color: #888;
+    text-shadow: 0px 0px 1px #333;
+    font-size: 30px;
+    position: relative;
+    top: -27px;
+    left: -10px;
+}
+#date1 {
+    letter-spacing: 10px;
+    font-size: 14px;
+    font-family: "Arkhip";
+    color: #fff;
+}
+#date2 {
+    letter-spacing: 10px;
+    font-size: 14px;
+    font-family: "IBM";
+    color: #fff;
+}
+#date3 {
+    letter-spacing: 10px;
+    font-size: 14px;
+    font-family: "Go";
+    color: #fff;
+}
+#date4 {
+    letter-spacing: 10px;
+    font-size: 14px;
+    font-family: "Gp";
+    color: #fff;
+}
+#date5 {
+    letter-spacing: 10px;
+    font-size: 14px;
+    font-family: "ka1";
+    color: #fff;
+}

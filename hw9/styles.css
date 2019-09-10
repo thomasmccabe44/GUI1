@@ -1,6 +1,8 @@
-.carousel-inner {
-  background-color: white;
-  width: 100%;
-  padding-top: 100%; /* 1:1 Aspect Ratio */
-  position: relative; /* If you want text inside of it */
+/* .carousel-control-prev, .carousel-control-next {
+    align-content: center!important;
+    justify-content: center!important;
+    text-align: center;
+} */
+img{
+    height: 500px;
 }

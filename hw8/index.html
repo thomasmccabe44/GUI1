@@ -18,58 +18,146 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
 
-	<title>HW#8(1)</title>
+	<title>HW#8</title>
 </head>
 
 <body>
+	<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header text-center">
+					<h4 class="modal-title w-100 font-weight-bold">Contact Form</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body mx-3">
+					<div class="col-sm-12">
+						<label for="firstname">First Name</label>
+						<input type="text" id="firstname" placeholder="John" class="form-control validate">
+					</div>
 
+					<div class="col-sm-12">
+						<label for="lastname">Last Name</label>
+						<input type="text" id="lastname" placeholder="Smith" class="form-control validate">
+					</div>
 
-	<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-	aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header text-center">
-				<h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body mx-3">
-				<div class="md-form mb-5">
-					<i class="fas fa-envelope prefix grey-text"></i>
-					<input type="email" id="defaultForm-email" class="form-control validate">
-					<label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+					<div class="col-sm-12">
+						<label for="email">Email</label>
+						<input type="email" id="email" class="form-control validate" required>
+					</div>
+
+					<div class="col-sm-12">
+						<label for="phone">Phone</label>
+						<input type="phone" id="phone" class="form-control validate" required>
+					</div>
+
+					<div class="col-sm-12">
+						<label for="address1">Address 1</label>
+						<input type="text" id="address1" class="form-control validate">
+					</div>
+
+					<div class="col-sm-12">
+						<label for="address2">Address 2</label>
+						<input type="text" id="address2" class="form-control validate">
+					</div>
+
+					<div class="col-sm-12">
+						<label>State</label>
+						<select class="form-control">
+							<option value="State">State</option>
+							<option value="AL">AL</option>
+							<option value="AK">AK</option>
+							<option value="AR">AR</option>
+							<option value="AZ">AZ</option>
+							<option value="CA">CA</option>
+							<option value="CO">CO</option>
+							<option value="CT">CT</option>
+							<option value="DC">DC</option>
+							<option value="DE">DE</option>
+							<option value="FL">FL</option>
+							<option value="GA">GA</option>
+							<option value="HI">HI</option>
+							<option value="IA">IA</option>
+							<option value="ID">ID</option>
+							<option value="IL">IL</option>
+							<option value="IN">IN</option>
+							<option value="KS">KS</option>
+							<option value="KY">KY</option>
+							<option value="LA">LA</option>
+							<option value="MA">MA</option>
+							<option value="MD">MD</option>
+							<option value="ME">ME</option>
+							<option value="MI">MI</option>
+							<option value="MN">MN</option>
+							<option value="MO">MO</option>
+							<option value="MS">MS</option>
+							<option value="MT">MT</option>
+							<option value="NC">NC</option>
+							<option value="NE">NE</option>
+							<option value="NH">NH</option>
+							<option value="NJ">NJ</option>
+							<option value="NM">NM</option>
+							<option value="NV">NV</option>
+							<option value="NY">NY</option>
+							<option value="ND">ND</option>
+							<option value="OH">OH</option>
+							<option value="OK">OK</option>
+							<option value="OR">OR</option>
+							<option value="PA">PA</option>
+							<option value="RI">RI</option>
+							<option value="SC">SC</option>
+							<option value="SD">SD</option>
+							<option value="TN">TN</option>
+							<option value="TX">TX</option>
+							<option value="UT">UT</option>
+							<option value="VT">VT</option>
+							<option value="VA">VA</option>
+							<option value="WA">WA</option>
+							<option value="WI">WI</option>
+							<option value="WV">WV</option>
+							<option value="WY">WY</option>
+						</select>
+					</div>
+
+					<div class="col-sm-12">
+						<label>Zipcode</label>
+						<input type="text" class="form-control" placeholder="Zipcode">
+					</div>
+
+					<div class="col-sm-12">
+						<label>Country</label>
+						<input type="text" class="form-control" placeholder="Country">
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button id="saveBtn" type="button" class="btn btn-primary">Save</button>
+					</div>
+
+					</form>
 				</div>
 
-				<div class="md-form mb-4">
-					<i class="fas fa-lock prefix grey-text"></i>
-					<input type="password" id="defaultForm-pass" class="form-control validate">
-					<label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
-				</div>
-
-			</div>
-			<div class="modal-footer d-flex justify-content-center">
-				<button class="btn btn-default">Login</button>
 			</div>
 		</div>
 	</div>
-</div>
+	</div>
 
-<div class="text-center">
-	<a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Create</a>
-</div>
+	<div class="text-center">
+		<a href="" class="btn btn-success btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">(+)</a>
+	</div>
 
-<!--
+	<!--
 	- This is how you include JS in your HTML file
 	- do it before the a closing body
 
 -->
-<script type="text/javascript">
-	$('#saveBtn').click(function() {
-		// You may add JS here ...
-		console.log("Save clicked !!!");
-	});
-</script>
+	<script type="text/javascript">
+		$('#saveBtn').click(function() {
+			// You may add JS here ...
+			console.log("Save clicked !!!");
+		});
+	</script>
 
 </body>
 

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>heart</title>
+    <style type="text/css">
+    #hearts {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .heart-container {
+        float: left;
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        -moz-animation-duration: 8s;
+        -moz-animation-name: fall;
+        -moz-animation-timing-function: linear;
+        -webkit-animation-duration: 8s;
+        -webkit-animation-name: fall;
+        -webkit-animation-timing-function: linear;
+    }
+    @-moz-keyframes fall {
+        from {
+            top: -20px;
+        }
+        to {
+            top: 100%;
+        }
+    }
+    @-webkit-keyframes fall {
+        from {
+            top: -10%;
+        }
+        to {
+            top: 100%;
+        }
+    }
+    .heart {
+        overflow: hidden;
+        height: 20px;
+        width: 20px;
+        font-size: 20px;
+        text-align: center;
+        color: red;
+        -moz-animation-duration: 0.5s;
+        -moz-animation-name: swing;
+        -moz-animation-timing-function: ease-in-out;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-direction: alternate;
+        -moz-transform-origin: center center;
+        -webkit-animation-duration: 0.5s;
+        -webkit-animation-name: swing;
+        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: alternate;
+        -webkit-transform-origin: center center;
+    }
+    @-moz-keyframes swing {
+        from {
+            -moz-transform: rotate(-45deg) translateX(10px);
+        }
+        to {
+            -moz-transform: rotate(45deg) translateX(-10px);
+        }
+    }
+    @-moz-keyframes spin {
+        from {
+            -moz-transform: scaleX(1) translateX(5px);
+        }
+        50% {
+            -moz-transform: scaleX(0.1);
+        }
+        to {
+            -moz-transform: scaleX(1) translateX(-5px);
+        }
+    }
+    @-webkit-keyframes swing {
+        from {
+            -webkit-transform: rotate(-45deg) translateX(10px);
+        }
+        to {
+            -webkit-transform: rotate(45deg) translateX(-10px);
+        }
+    }
+    @-webkit-keyframes spin {
+        from {
+            -webkit-transform: scaleX(1) translateX(5px);
+        }
+        50% {
+            -webkit-transform: scaleX(0.1);
+        }
+        to {
+            -webkit-transform: scaleX(1) translateX(-5px);
+        }
+    }
+
+
+    img {
+        display:block;
+        margin:auto;
+        margin-top: 10%;
+
+        -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(80%, transparent) , to(rgba(250, 250, 250, 0.6)));
+
+    }
+
+</style>
+</head>
+<body>
+
+
+    <div id="hearts">
+        <div class="heart-container">
+            <div class="heart">
+                &hearts;
+            </div>
+        </div>
+    </div>
+
+    <img src="HENG_KAR-210.jpg" width="50%">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+    <script type="text/javascript">
+        function newHeart () {
+
+            var hearts = $('.heart');
+
+
+            if (hearts.length >= 24) return setTimeout(newHeart, 1000);
+            var c = $('.heart-container:first').clone();
+            var anims = ['swing', 'spin'];
+            var a = anims[Math.round(Math.random())];
+            c.find('.heart')
+            .css('opacity', 0.2 + Math.random() * 0.8)
+            .css('-webkit-animation-name', a)
+            .css('-moz-animation-name', a);
+            c.css('left', (10 + Math.random() * ($('body').innerWidth() - 10)) + 'px');
+            c.css('-webkit-animation-name', 'fall');
+            c.css('-webkit-animation-duration', (4 + Math.random() * 14) + 's');
+            c.css('-webkit-transform', 'scale(' + (0.4 + Math.random() * 2) + ')');
+            c.css('-moz-animation-duration', (4 + Math.random() * 14) + 's');
+            c.css('-moz-transform', 'scale(' + (0.4 + Math.random() * 2) + ')');
+            $('#hearts').append(c);
+            c.bind('animationend', function () { c.remove(); });
+            c.bind('webkitAnimationEnd', function () { c.remove(); });
+            setTimeout(newHeart, 200);
+        }
+        setTimeout(newHeart, 200);
+
+    </script>
+</body>
+</html>

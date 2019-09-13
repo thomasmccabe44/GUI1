@@ -1,6 +1,6 @@
 #demo {
     text-align: center;
-    font-size: 60px;
+    font-size: 20px;
     margin-top: 0px;
     color: white;
     font-family: arkhip, sans-serif;
@@ -15,8 +15,4 @@
     border-radius: 5px;
     margin: 0 auto;
     margin-top: 15%;
-}
-
-#timer {
-    text-align: center;
 }

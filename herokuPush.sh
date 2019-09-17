@@ -10,7 +10,7 @@
 #1 - you must be in the hw directory
 #2 - you must login to heroku cli : heroku login
 
-repoName="$(basename `pwd`)-$1"
+repoName="$(basename `pwd`)"
 # echo $repoName
 
 if [ -z "$1" ]

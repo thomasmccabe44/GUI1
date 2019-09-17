@@ -18,8 +18,7 @@ fi
 # =           Heroku           =
 # ==============================
 
-date=$(date +%s)
-appName='tmcabe-'$repoName
+appName='tmccabe-'$repoName
 echo 'appName =' $appName
 
 # exit
@@ -30,7 +29,6 @@ heroku create $appName
 heroku git:remote -a $appName
 heroku buildpacks:set heroku/php
 cat '{}' >> composer.json
-cat '<?php header( 'Location: /index.html' ) ;  ?>' >> index.html
 git init
 git status
 git add -A

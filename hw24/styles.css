@@ -4,19 +4,19 @@ body {
 
 #wish {
     text-align: center;
-    font-size: 60px;
-    margin-top: 0px;
+    font-size: 40px;
+    margin-top: 5px;
     color: white;
-    font-family: arkhip, sans-serif;
+    font-family: 'Indie Flower', cursive;
 }
 
 .container {
     background-color: lightpink;
-    padding: 25px;
+    padding: 40px;
     max-width: 600px;
     width: 100%;
     text-align: center;
     border-radius: 5px;
     margin: 0 auto;
-    margin-top: 15%;
+    margin-top: 5%;
 }

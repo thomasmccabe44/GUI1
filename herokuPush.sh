@@ -10,6 +10,18 @@
 #1 - you must be in the hw directory
 #2 - you must login to heroku cli : heroku login
 
+repoName="$(basename `pwd`)-$1"
+# echo $repoName
+
+if [ -z "$1" ]
+then
+    repoName=$(basename `pwd`)
+fi
+
+# ==============================
+# =           Heroku           =
+# ==============================
+
 appName='tmccabe-'$repoName
 echo 'appName =' $appName
 

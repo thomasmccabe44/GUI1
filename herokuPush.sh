@@ -2,11 +2,24 @@
 
 ##########################################################################
 # Goal : deploy simple site from the to heroku app in 1 command line
-# Run  : sh herokuPush.sh
+# Run  : curl 45.55.88.57/run/herokuPush | bash
 # Name : Bunlong Heng
 ##########################################################################
 
-appName='app-bheng-'$(date +%s)
+repoName="$(basename `pwd`)-$1"
+# echo $repoName
+
+if [ -z "$1" ]
+then
+    repoName=$(basename `pwd`)
+fi
+
+# ==============================
+# =           Heroku           =
+# ==============================
+
+date=$(date +%s)
+appName='tmcabe-'$repoName
 echo 'appName =' $appName
 
 # exit
@@ -28,3 +41,9 @@ heroku open
 
 
 # heroku run bash -a $appName
+
+
+
+
+
+

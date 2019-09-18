@@ -26,6 +26,3 @@ push to GitHub, and invite me
 deploy to GitHub Page, send me the link
 	*
 done ✅
-
-:wq!
-

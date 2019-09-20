@@ -1,46 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+
+	<style type="text/css">
+
+
+	#chart1 {
+		height: 300px;
+	}
+
+</style>
+
 </head>
 <body>
-    <canvas id="chart1" width="300" height="300"></canvas>
-    <script type="text/javascript">
-                labelList = ["MA","NH","NY","ND","TX"];
-                dataList = [2,4,6,8,10];
 
-                let chart1 = document.getElementById('chart1').getContext('2d');
-                // let chart1Chart = new Chart('chart1', {
-                        type:'doughnut', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
-                        data:{
-                                labels:labelList,
-                                datasets:[{
-                                        label:'Count',
-                                        data:dataList,
-                                        backgroundColor:shuffle(colors),
-                                        borderWidth:1,
-                                        borderColor:'#777',
-                                        hoverBorderWidth:3,
-                                        hoverBorderColor:'#000'
-                                }]
-                        },
-                        options:{
-                                title:{
-                                        display:true,
-                                        text:'device'
-                                },
-                                legend:{
-                                        display:false,
-                                        position:'right',
-                                        labels:{
-                                                fontColor:'#000'
-                                        }
-                                }
-                        }
-                });
-    </script>
+
+	<div style="width:800px; margin:0 auto;">
+
+		<!-- id is very important here -->
+		<canvas id="chart1"></canvas>
+
+	</div>
+
+	<!-- include cdn for chartJS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+
+	<script type="text/javascript">
+
+		// data
+		labels = ["MA","NH","NY","ND","TX"];
+		data = [2,4,6,8,10];
+
+		// selecting from the HTML DOM
+		let chart1 = document.getElementById('chart1').getContext('2d');
+
+		// instatiate
+		let chart1Chart = new Chart(chart1, {
+			type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+			data:{
+				labels:labels,
+				datasets:[{
+					label:'Count',
+					data:data,
+					backgroundColor: `rgb(36, 148, 243, 0.3)`,
+					borderWidth:1,
+					borderColor: `rgb(36, 148, 243, 1.0)`,
+					hoverBorderWidth:3,
+					hoverBorderColor:'#000'
+				}]
+			},
+			options:{
+				responsive: true,
+				maintainAspectRatio: false,
+				title:{
+					display:true,
+					text:'State Population'
+				},
+				legend:{
+					display:false,
+					position:'right',
+					labels:{
+						fontColor:'#000'
+					}
+				}
+			}
+		});
+	</script>
 </body>
 </html>

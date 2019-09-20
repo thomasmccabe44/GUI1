@@ -2,72 +2,83 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
 <body>
-    <div class="text-center">
-        <button class="btn btn-lg btn-success" type="button" id="show">Show</button>
-        <button class="btn btn-lg btn-danger" type="button" id="hide">Hide</button>
-    </div>
-    <table class="table table-striped table-dark">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-            </tr>
-        </tbody>
-    </table>
+	<div class="text-center">
+		<button class="btn btn-lg btn-success" type="button" id="show">Show</button>
+		<button class="btn btn-lg btn-danger" type="button" id="hide">Hide</button>
+	</div>
 
-    <script type="text/javascript">
-        // EX1
-        // $('#hide').on('click', function() {
-        //     $('table').hide();
-        // });
-        // $('#show').on('click', function() {
-        //     $('table').show();
-        // });
-        // EX2
-        // $('#hide').on('click',function() {
-        //     $('table').fadeOut(2000);
-        // });
-        // $('#show').on('click',function() {
-        //     $('table').fadeIn(2000);
-        // });
-        $('#hide').on('click', function() {
-            $('table').slideUp(3000);
-        });
-        $('#show').on('click', function() {
-            $('table').slideDown(3000);
-        });
-    </script>
+	<br><br><br>
+
+	<table class="table table-striped table-dark">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">First</th>
+				<th scope="col">Last</th>
+				<th scope="col">Handle</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">1</th>
+				<td>Mark</td>
+				<td>Otto</td>
+				<td>@mdo</td>
+			</tr>
+			<tr>
+				<th scope="row">2</th>
+				<td>Jacob</td>
+				<td>Thornton</td>
+				<td>@fat</td>
+			</tr>
+			<tr>
+				<th scope="row">3</th>
+				<td>Larry</td>
+				<td>the Bird</td>
+				<td>@twitter</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- EX1 -->
+	<!-- $('#hide').on('click', function() { -->
+	<!-- $('table').hide(); -->
+	<!-- }); -->
+	<!-- $('#show').on('click', function() { -->
+	<!-- $('table').show(); -->
+	<!-- }); -->
+	<!-- EX2 -->
+	<!-- $('#hide').on('click',function() { -->
+	<!-- $('table').fadeOut(2000); -->
+	<!-- }); -->
+	<!-- $('#show').on('click',function() { -->
+	<!-- $('table').fadeIn(2000); -->
+	<!-- }); -->
+
+	<script type="text/javascript">
+
+		$('#hide').on('click', function() {
+			$('.table').slideUp("slow", function(){
+				console.log('%c -------->> hide clicked <<--------', "color: green;");
+			});
+		});
+
+		$('#show').on('click', function() {
+			$('.table').slideDown("slow", function(){
+				console.log('%c -------->> show clicked <<--------', "color: green;");
+			});
+
+		});
+	</script>
 </body>
 
 </html>

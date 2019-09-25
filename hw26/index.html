@@ -1,69 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>hw26</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hw26</title>
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" charset="utf-8"></script>
 
 </head>
+
 <body>
 
 
-	<div class="char1">
+    <div>
+        <canvas id="chart1"></canvas>
+    </div>
+    <div>
+        <canvas id="chart2"></canvas>
+    </div>
+    <div>
+        <canvas id="chart3"></canvas>
+    </div>
+    <div>
+        <canvas id="chart4"></canvas>
+    </div>
+    <div>
+        <canvas id="chart5"></canvas>
+    </div>
+    <div>
+        <canvas id="chart6"></canvas>
+    </div>
 
-		<!-- id is very important here -->
-		<canvas id="chart1"></canvas>
-
-	</div>
-    <div class="char2">
-
-		<!-- id is very important here -->
-		<canvas id="chart2"></canvas>
-
-	</div>
-
-    <!-- include cdn for chartJS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 
     <script type="text/javascript">
-
         // data
-        labels = ["MA","NH","NY","ND","TX"];
-        data = [4,6,8,10,12];
+        labels = ["MA", "NH", "NY", "ND", "TX"];
+        data = [4, 6, 8, 10, 12];
 
         // selecting from the HTML DOM
         let chart1 = document.getElementById('chart1').getContext('2d');
 
         // instatiate
         let chart1Chart = new Chart(chart1, {
-            type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
-            data:{
-                labels:labels,
-                datasets:[{
-                    label:'Count',
-                    data:data,
+            type: 'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Count',
+                    data: data,
                     backgroundColor: `rgb(36, 148, 243, 0.3)`,
-                    borderWidth:1,
+                    borderWidth: 1,
                     borderColor: `rgb(36, 148, 243, 1.0)`,
-                    hoverBorderWidth:3,
-                    hoverBorderColor:'#000'
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
                 }]
             },
-            options:{
+            options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                title:{
-                    display:true,
-                    text:'State Population'
+                title: {
+                    display: true,
+                    text: 'State Population'
                 },
-                legend:{
-                    display:false,
-                    position:'right',
-                    labels:{
-                        fontColor:'#000'
+                legend: {
+                    display: false,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
                     }
                 }
             }
@@ -74,31 +80,31 @@
 
         // instatiate
         let chart2Chart = new Chart(chart2, {
-            type:'horizontalBar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
-            data:{
-                labels:labels,
-                datasets:[{
-                    label:'Count',
-                    data:data,
+            type: 'horizontalBar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Count',
+                    data: data,
                     backgroundColor: `rgb(36, 148, 243, 0.3)`,
-                    borderWidth:1,
+                    borderWidth: 1,
                     borderColor: `rgb(36, 148, 243, 1.0)`,
-                    hoverBorderWidth:3,
-                    hoverBorderColor:'#000'
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
                 }]
             },
-            options:{
+            options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                title:{
-                    display:true,
-                    text:'State Population'
+                title: {
+                    display: true,
+                    text: 'State Population'
                 },
-                legend:{
-                    display:false,
-                    position:'right',
-                    labels:{
-                        fontColor:'#000'
+                legend: {
+                    display: false,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
                     }
                 }
             }
@@ -109,31 +115,31 @@
 
         // instatiate
         let chart3Chart = new Chart(chart3, {
-            type:'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
-            data:{
-                labels:labels,
-                datasets:[{
-                    label:'Count',
-                    data:data,
+            type: 'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Count',
+                    data: data,
                     backgroundColor: `rgb(36, 148, 243, 0.3)`,
-                    borderWidth:1,
+                    borderWidth: 1,
                     borderColor: `rgb(36, 148, 243, 1.0)`,
-                    hoverBorderWidth:3,
-                    hoverBorderColor:'#000'
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
                 }]
             },
-            options:{
+            options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                title:{
-                    display:true,
-                    text:'State Population'
+                title: {
+                    display: true,
+                    text: 'State Population'
                 },
-                legend:{
-                    display:false,
-                    position:'right',
-                    labels:{
-                        fontColor:'#000'
+                legend: {
+                    display: false,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
                     }
                 }
             }
@@ -144,31 +150,31 @@
 
         // instatiate
         let chart4Chart = new Chart(chart4, {
-            type:'line', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
-            data:{
-                labels:labels,
-                datasets:[{
-                    label:'Count',
-                    data:data,
+            type: 'line', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Count',
+                    data: data,
                     backgroundColor: `rgb(36, 148, 243, 0.3)`,
-                    borderWidth:1,
+                    borderWidth: 1,
                     borderColor: `rgb(36, 148, 243, 1.0)`,
-                    hoverBorderWidth:3,
-                    hoverBorderColor:'#000'
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
                 }]
             },
-            options:{
+            options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                title:{
-                    display:true,
-                    text:'State Population'
+                title: {
+                    display: true,
+                    text: 'State Population'
                 },
-                legend:{
-                    display:false,
-                    position:'right',
-                    labels:{
-                        fontColor:'#000'
+                legend: {
+                    display: false,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
                     }
                 }
             }
@@ -179,31 +185,31 @@
 
         // instatiate
         let chart5Chart = new Chart(chart5, {
-            type:'doughnut', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
-            data:{
-                labels:labels,
-                datasets:[{
-                    label:'Count',
-                    data:data,
+            type: 'doughnut', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Count',
+                    data: data,
                     backgroundColor: `rgb(36, 148, 243, 0.3)`,
-                    borderWidth:1,
+                    borderWidth: 1,
                     borderColor: `rgb(36, 148, 243, 1.0)`,
-                    hoverBorderWidth:3,
-                    hoverBorderColor:'#000'
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
                 }]
             },
-            options:{
+            options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                title:{
-                    display:true,
-                    text:'State Population'
+                title: {
+                    display: true,
+                    text: 'State Population'
                 },
-                legend:{
-                    display:false,
-                    position:'right',
-                    labels:{
-                        fontColor:'#000'
+                legend: {
+                    display: false,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
                     }
                 }
             }
@@ -216,31 +222,31 @@
 
         // instatiate
         let chart6Chart = new Chart(chart6, {
-            type:'radar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
-            data:{
-                labels:labels,
-                datasets:[{
-                    label:'Count',
-                    data:data,
+            type: 'radar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Count',
+                    data: data,
                     backgroundColor: `rgb(36, 148, 243, 0.3)`,
-                    borderWidth:1,
+                    borderWidth: 1,
                     borderColor: `rgb(36, 148, 243, 1.0)`,
-                    hoverBorderWidth:3,
-                    hoverBorderColor:'#000'
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
                 }]
             },
-            options:{
+            options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                title:{
-                    display:true,
-                    text:'State Population'
+                title: {
+                    display: true,
+                    text: 'State Population'
                 },
-                legend:{
-                    display:false,
-                    position:'right',
-                    labels:{
-                        fontColor:'#000'
+                legend: {
+                    display: false,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
                     }
                 }
             }
@@ -252,37 +258,36 @@
 
         // instatiate
         let chart7Chart = new Chart(chart7, {
-            type:'polarArea', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
-            data:{
-                labels:labels,
-                datasets:[{
-                    label:'Count',
-                    data:data,
+            type: 'polarArea', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Count',
+                    data: data,
                     backgroundColor: `rgb(36, 148, 243, 0.3)`,
-                    borderWidth:1,
+                    borderWidth: 1,
                     borderColor: `rgb(36, 148, 243, 1.0)`,
-                    hoverBorderWidth:3,
-                    hoverBorderColor:'#000'
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
                 }]
             },
-            options:{
+            options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                title:{
-                    display:true,
-                    text:'State Population'
+                title: {
+                    display: true,
+                    text: 'State Population'
                 },
-                legend:{
-                    display:false,
-                    position:'right',
-                    labels:{
-                        fontColor:'#000'
+                legend: {
+                    display: false,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
                     }
                 }
             }
         });
-
-
-    </script>
+        </script>
 </body>
+
 </html>

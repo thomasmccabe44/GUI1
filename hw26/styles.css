@@ -1,14 +1,12 @@
 #chart1 {
     height: 300px;
-}
-
-.char1{
     width:800px;
     margin:0 auto;
 }
 
-.char2{
+#chart2, #chart4, #chart6{
     height:300px;
     width:800px;
     margin:0 auto;
+    background: lightgrey;
 }

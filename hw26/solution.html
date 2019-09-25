@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hw26 - solution</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-xs-2"><canvas id="chart1"></canvas></div>
+        <div class="col-xs-2"><canvas id="chart2"></canvas></div>
+        <div class="col-xs-2"><canvas id="chart3"></canvas></div>
+        <div class="col-xs-2"><canvas id="chart4"></canvas></div>
+        <div class="col-xs-2"><canvas id="chart5"></canvas></div>
+        <div class="col-xs-1"><canvas id="chart6"></canvas></div>
+        <div class="col-xs-1"><canvas id="chart7"></canvas></div>
+    </div>
+
+
+    <!-- include cdn for chartJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+
+    <script type="text/javascript">
+
+        // data
+        labels = ["MA","NH","NY","ND","TX"];
+        data = [2,4,6,8,10];
+
+        // selecting from the HTML DOM
+        let chart1 = document.getElementById('chart1').getContext('2d');
+
+        // instatiate
+        let chart1Chart = new Chart(chart1, {
+            type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data:{
+                labels:labels,
+                datasets:[{
+                    label:'Count',
+                    data:data,
+                    backgroundColor: `rgb(36, 148, 243, 0.3)`,
+                    borderWidth:1,
+                    borderColor: `rgb(36, 148, 243, 1.0)`,
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000'
+                }]
+            },
+            options:{
+                responsive: true,
+                maintainAspectRatio: false,
+                title:{
+                    display:true,
+                    text:'State Population'
+                },
+                legend:{
+                    display:false,
+                    position:'right',
+                    labels:{
+                        fontColor:'#000'
+                    }
+                }
+            }
+        });
+
+        // selecting from the HTML DOM
+        let chart2 = document.getElementById('chart2').getContext('2d');
+
+        // instatiate
+        let chart2Chart = new Chart(chart2, {
+            type:'horizontalBar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data:{
+                labels:labels,
+                datasets:[{
+                    label:'Count',
+                    data:data,
+                    backgroundColor: `rgb(36, 148, 243, 0.3)`,
+                    borderWidth:1,
+                    borderColor: `rgb(36, 148, 243, 1.0)`,
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000'
+                }]
+            },
+            options:{
+                responsive: true,
+                maintainAspectRatio: false,
+                title:{
+                    display:true,
+                    text:'State Population'
+                },
+                legend:{
+                    display:false,
+                    position:'right',
+                    labels:{
+                        fontColor:'#000'
+                    }
+                }
+            }
+        });
+
+        // selecting from the HTML DOM
+        let chart3 = document.getElementById('chart3').getContext('2d');
+
+        // instatiate
+        let chart3Chart = new Chart(chart3, {
+            type:'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data:{
+                labels:labels,
+                datasets:[{
+                    label:'Count',
+                    data:data,
+                    backgroundColor: `rgb(36, 148, 243, 0.3)`,
+                    borderWidth:1,
+                    borderColor: `rgb(36, 148, 243, 1.0)`,
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000'
+                }]
+            },
+            options:{
+                responsive: true,
+                maintainAspectRatio: false,
+                title:{
+                    display:true,
+                    text:'State Population'
+                },
+                legend:{
+                    display:false,
+                    position:'right',
+                    labels:{
+                        fontColor:'#000'
+                    }
+                }
+            }
+        });
+
+        // selecting from the HTML DOM
+        let chart4 = document.getElementById('chart4').getContext('2d');
+
+        // instatiate
+        let chart4Chart = new Chart(chart4, {
+            type:'line', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data:{
+                labels:labels,
+                datasets:[{
+                    label:'Count',
+                    data:data,
+                    backgroundColor: `rgb(36, 148, 243, 0.3)`,
+                    borderWidth:1,
+                    borderColor: `rgb(36, 148, 243, 1.0)`,
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000'
+                }]
+            },
+            options:{
+                responsive: true,
+                maintainAspectRatio: false,
+                title:{
+                    display:true,
+                    text:'State Population'
+                },
+                legend:{
+                    display:false,
+                    position:'right',
+                    labels:{
+                        fontColor:'#000'
+                    }
+                }
+            }
+        });
+
+        // selecting from the HTML DOM
+        let chart5 = document.getElementById('chart5').getContext('2d');
+
+        // instatiate
+        let chart5Chart = new Chart(chart5, {
+            type:'doughnut', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data:{
+                labels:labels,
+                datasets:[{
+                    label:'Count',
+                    data:data,
+                    backgroundColor: `rgb(36, 148, 243, 0.3)`,
+                    borderWidth:1,
+                    borderColor: `rgb(36, 148, 243, 1.0)`,
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000'
+                }]
+            },
+            options:{
+                responsive: true,
+                maintainAspectRatio: false,
+                title:{
+                    display:true,
+                    text:'State Population'
+                },
+                legend:{
+                    display:false,
+                    position:'right',
+                    labels:{
+                        fontColor:'#000'
+                    }
+                }
+            }
+        });
+
+
+
+        // selecting from the HTML DOM
+        let chart6 = document.getElementById('chart6').getContext('2d');
+
+        // instatiate
+        let chart6Chart = new Chart(chart6, {
+            type:'radar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data:{
+                labels:labels,
+                datasets:[{
+                    label:'Count',
+                    data:data,
+                    backgroundColor: `rgb(36, 148, 243, 0.3)`,
+                    borderWidth:1,
+                    borderColor: `rgb(36, 148, 243, 1.0)`,
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000'
+                }]
+            },
+            options:{
+                responsive: true,
+                maintainAspectRatio: false,
+                title:{
+                    display:true,
+                    text:'State Population'
+                },
+                legend:{
+                    display:false,
+                    position:'right',
+                    labels:{
+                        fontColor:'#000'
+                    }
+                }
+            }
+        });
+
+
+        // selecting from the HTML DOM
+        let chart7 = document.getElementById('chart7').getContext('2d');
+
+        // instatiate
+        let chart7Chart = new Chart(chart7, {
+            type:'polarArea', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data:{
+                labels:labels,
+                datasets:[{
+                    label:'Count',
+                    data:data,
+                    backgroundColor: `rgb(36, 148, 243, 0.3)`,
+                    borderWidth:1,
+                    borderColor: `rgb(36, 148, 243, 1.0)`,
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000'
+                }]
+            },
+            options:{
+                responsive: true,
+                maintainAspectRatio: false,
+                title:{
+                    display:true,
+                    text:'State Population'
+                },
+                legend:{
+                    display:false,
+                    position:'right',
+                    labels:{
+                        fontColor:'#000'
+                    }
+                }
+            }
+        });
+
+
+    </script>
+</body>
+</html>

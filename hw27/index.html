@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>hw27</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" charset="utf-8"></script>
 </head>
+
 <body>
+    <div>
+        <canvas id="chart1"></canvas>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+
+    <script type="text/javascript">
+        // data
+        labels = ["Coding", "Sleeping", "Workout", "Work", "Eat", "Driving"];
+        data = [4, 7, 1, 10, 1.5, .5];
+
+        // selecting from the HTML DOM
+        let chart1 = document.getElementById('chart1').getContext('2d');
+
+        // instatiate
+        let chart1Chart = new Chart(chart1, {
+            type: 'doughnut', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Count',
+                    data: data,
+                    backgroundColor: ["#EA8225","#25C8CB","#2997AB","#F25454","#00AB66","#8AD524"],
+                    borderWidth: 1,
+                    borderColor: `rgb(36, 148, 243, 1.0)`,
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                title: {
+                    display: true,
+                    text: 'State Population'
+                },
+                legend: {
+                    display: false,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
+                    }
+                }
+            }
+        });
+    </script>
 
 </body>
+
 </html>

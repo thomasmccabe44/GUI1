@@ -1,3 +1,7 @@
+body {
+    background-image: url("background.jpg");
+}
+
 #demo {
     text-align: center;
     font-size: 60px;
@@ -19,4 +23,5 @@
 
 #timer {
     text-align: center;
+    color: white;
 }

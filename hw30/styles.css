@@ -1,0 +1,9 @@
+.container {
+    padding: 10px 10px 10px 10px;
+    background: lightgrey;
+    text-align: center;
+}
+
+.form-control {
+    text-align: center;
+}

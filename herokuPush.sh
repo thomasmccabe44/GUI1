@@ -6,11 +6,9 @@
 # Name : Bunlong Heng
 ##########################################################################
 
-#Restriction
-#1 - you must be in the hw directory
-#2 - you must login to heroku cli : heroku login
 
-repoName="$(basename `pwd`)"
+
+repoName="$(basename `pwd`)-$1"
 # echo $repoName
 
 if [ -z "$1" ]
@@ -18,11 +16,16 @@ then
     repoName=$(basename `pwd`)
 fi
 
+repoName="$(sed -e 's/[[:space:]]*$//' <<<${repoName})"
+echo $repoName
+
+# exit
+
 # ==============================
 # =           Heroku           =
 # ==============================
 
-appName='tmccabe-'$repoName
+appName='tmcabe-'$repoName
 echo 'appName =' $appName
 
 # exit

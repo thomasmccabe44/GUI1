@@ -19,26 +19,44 @@
 /* Integers */
 
 #int1{
-
+    font-family: arkhip, sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    color: black;
 }
 
 #int2{
-
+    font-family: arkhip, sans-serif;
+    font-size: 14px;
+    color: blue;
 }
 
 #int3{
-
+    font-family: arkhip, sans-serif;
+    font-size: 14px;
+    font-style: oblique;
+    color: green;
 }
 
 
 /* Images */
 
 #carImgs {
-
+    font-family: fantasy;
+    font-size: 14px;
+    font-style: italic;
+    color: black;
 }
 
 #truckImgs{
-
+font-family: fantasy;
+font-size: 14px;
+color: blue;
 }
 
-#suvImgs
+#suvImgs{
+font-family: fantasy;
+font-size: 14px;
+font-style: oblique;
+color: green;
+}

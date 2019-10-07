@@ -1,44 +1,61 @@
-var cars = [
+// String
+var carTypes = [
     " Sports",
     " Sedan",
     " Hatchback"
 ];
 
-for (i=0; i<cars.length; i++) {
-    $("#cars").append(cars[i]);
+for (i=0; i<carTypes.length; i++) {
+    $('#carTypes').append(carTypes[i]);
 };
 
-var trucks = [
+var truckTypes = [
     " Single Cab",
     " Double Cab",
     " Crew"
 ];
-document.getElementById("trucks").innerHTML = trucks;
+for (i=0; i<truckTypes.length; i++) {
+    $('#truckTypes').append(truckTypes[i]);
+};
 
-var suvs = [
+var suvTypes = [
     " Crosover",
     " Fullsized",
     " Compact"
 ];
-document.getElementById("suvs").innerHTML = suvs;
+for (i=0; i<suvTypes.length; i++) {
+    $('#suvTypes').append(suvTypes[i]);
+};
+
+// Integers
+
+
+
+
 
 // Images
 
-var cimg = [
-    src = ""
+var carImgs = [
+    ""
 ];
-document.getElementById("cimg").innerHTML = cimg;
+for (i=0; i<carImgs.length; i++) {
+    $('#carImgs').append(carImgs[i]);
+};
 
-var timg = [
-    " Single Cab",
-    " Double Cab",
-    " Crew"
+var truckImgs = [
+    " ",
+    " ",
+    " "
 ];
-document.getElementById("timg").innerHTML = timg;
+for (i=0; i<truckImgs.length; i++) {
+    $('#truckImgs').append(truckImgs[i]);
+};
 
-var simg = [
-    " Crosover",
-    " Fullsized",
-    " Compact"
+var suvImgs = [
+    " ",
+    " ",
+    " "
 ];
-document.getElementById("simg").innerHTML = simg;
+for (i=0; i<suvImgs.length; i++) {
+    $('#suvImgs').append(suvImgs[i]);
+};

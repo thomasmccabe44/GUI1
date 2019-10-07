@@ -1,17 +1,44 @@
-#cars {
+#carTypes {
     font-family: monospace;
     font-size: 14px;
     color: black;
 }
 
-#trucks {
+#truckTypes {
     font-family: arkhip, sans-serif;
     font-size: 14px;
     color: blue;
 }
 
-#suvs {
+#suvTypes {
     font-family: fantasy, serif;
     font-size: 14px;
     color: green;
 }
+
+/* Integers */
+
+#int1{
+
+}
+
+#int2{
+
+}
+
+#int3{
+
+}
+
+
+/* Images */
+
+#carImgs {
+
+}
+
+#truckImgs{
+
+}
+
+#suvImgs

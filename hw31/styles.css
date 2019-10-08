@@ -1,0 +1,62 @@
+#carTypes {
+    font-family: monospace;
+    font-size: 14px;
+    color: black;
+}
+
+#truckTypes {
+    font-family: arkhip, sans-serif;
+    font-size: 14px;
+    color: blue;
+}
+
+#suvTypes {
+    font-family: fantasy, serif;
+    font-size: 14px;
+    color: green;
+}
+
+/* Integers */
+
+#int1{
+    font-family: arkhip, sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    color: black;
+}
+
+#int2{
+    font-family: arkhip, sans-serif;
+    font-size: 14px;
+    color: blue;
+}
+
+#int3{
+    font-family: arkhip, sans-serif;
+    font-size: 14px;
+    font-style: oblique;
+    color: green;
+}
+
+
+/* Images */
+
+#carImgs {
+    font-family: fantasy;
+    font-size: 14px;
+    font-style: italic;
+    color: black;
+}
+
+#truckImgs{
+font-family: fantasy;
+font-size: 14px;
+color: blue;
+}
+
+#suvImgs{
+font-family: fantasy;
+font-size: 14px;
+font-style: oblique;
+color: green;
+}

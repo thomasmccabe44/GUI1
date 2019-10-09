@@ -1,19 +1,17 @@
-23 - create a count down date using JS - and JS libary
+32 - Parse json from local .json file jQuery
 
-- make the clock look nice
-	*
-create index.html, css, js
-	*
-test your work locally
-	*
-push to GitHub, and invite me
-	*
-deploy to GitHub Page, send me the link
-	*
-done ✅
+-   create index.html, css, js, jQuery
+
+-   read data from a local .json file
 
 
+-   create JSON files with data in them
 
 
-	*
-You will learn to use for date function in JS
+-   use all the technique you know
+
+-   test your work locally
+
+-   push to GitHub, and invite me
+
+-   done ✅

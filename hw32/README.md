@@ -1,17 +1,14 @@
 32 - Parse json from local .json file jQuery
 
--   create index.html, css, js, jQuery
+- create index.html, css, js, jQuery
 
--   read data from a local .json file
+- read data from a skills .json file
+
+- parse those into a table of 3 columns. 
+
+- Name, Type, Value
 
 
--   create JSON files with data in them
+Ref : bheng 
 
-
--   use all the technique you know
-
--   test your work locally
-
--   push to GitHub, and invite me
-
--   done ✅
+https://api.myjson.com/bins/s69qu

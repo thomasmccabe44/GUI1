@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HW32</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" charset="utf-8"></script>
+
 </head>
 
 <body>
@@ -15,33 +14,15 @@
     <h1>Parse JSON File Locally</h1>
 
     <table style="width:100%">
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Age</th>
-    </tr>
-    <tr>
-        <td>Jill</td>
-        <td>Smith</td>
-        <td>50</td>
-    </tr>
+    </table>
 
-</table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $.get('name.json', function(data) {
+         console.log( $.parseJSON( data ) );
+     });
 
-
-<script type="text/javascript"></script>
-
-<script type="text/javascript">
-
-    $.getJSON("ex1.json", function(json) {
-        console.log(json); // this will show the info it in firebug console
-
-
-    });
-
-
-
-</script>
+ </script>
 
 </body>
 

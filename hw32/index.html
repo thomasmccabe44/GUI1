@@ -2,32 +2,58 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HW32</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>HW32</title>
+
+	<style type="text/css">
+
+		#name {
+			color: red;
+		}
+
+		#age {
+			color: purple;
+		}
+
+
+	</style>
 
 </head>
 
 <body>
 
-    <h1>Parse JSON File Locally</h1>
+	<h1>
+		Hi! I'm
+		<small id="name"></small>
+		and I'm
+		<small id="age"></small>.
+	</h1>
 
-    <table style="width:100%"></table>
+	<!-- Import External JSON -->
+	<script type="text/javascript" src="data.json"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $.get('name.json', function(data) {
-         console.log( $.parseJSON( data ) );
-     });
+	<!-- CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
- </script>
+
+	<script type="text/javascript">
+
+		// Test your work
+		console.log(data);
+
+		//assign variables from your data
+		var name = data.name;
+		var age  = data.age;
+
+		//inject data to your HTML DOM
+		$('#name').text(name);
+		$('#age').text(age);
+
+	</script>
 
 </body>
 
 </html>
-
-
-<!-- Error:
-
-    Access to XMLHttpRequest at 'file:///Users/bheng/Sites/GUI1/hw32/name.json' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https. -->
